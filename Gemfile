@@ -27,7 +27,19 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem 'semantic-ui-sass'
+
+# Use jquery as the JavaScript librar
 gem 'jquery-rails'
+
+# # Use jquery-ui for pretty UI
+# gem 'jquery-ui-rails'
+#
+# # Use Sass to process CSS
+# gem 'sassc-rails'
+
+gem 'pry'
+
+# gem 'webpacker'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

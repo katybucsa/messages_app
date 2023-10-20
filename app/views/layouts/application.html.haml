@@ -7,7 +7,7 @@
     = csp_meta_tag
 
     = stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all"
-    = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
+    = javascript_importmap_tags
 
   %body
     .ui.small.inverted.menu
@@ -26,5 +26,5 @@
               %a.item Spanish
           .item
             .ui.primary.button Sign Up
-    .ui.container
+    .ui.container{data: {controller: params[:controller]}}
       = yield
