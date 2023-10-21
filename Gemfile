@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-ruby "3.2.2"
+ruby "3.0.6"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.1"
+gem "rails"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -27,15 +27,6 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem 'semantic-ui-sass'
-
-# Use jquery as the JavaScript librar
-gem 'jquery-rails'
-
-# Use jquery-ui for pretty UI
-gem 'jquery-ui-rails'
-
-# Use Sass to process CSS
-gem 'sassc-rails'
 
 gem 'pry'
 
