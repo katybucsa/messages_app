@@ -12,19 +12,6 @@
   %body
     .ui.small.inverted.menu
       .ui.container
-        %a.item
-          Home
-        %a.item
-          Messages
-        .right.menu
-          .ui.dropdown.item
-            Language
-            %i.dropdown.icon
-            .menu
-              %a.item English
-              %a.item Russian
-              %a.item Spanish
-          .item
-            .ui.primary.button Sign Up
+        = render partial: 'layouts/navigation_bar'
     .ui.container{data: {controller: params[:controller]}}
       = yield
