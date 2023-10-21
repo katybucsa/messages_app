@@ -1,1 +1,26 @@
-You have reached the login page
+%h2.ui.center.aligned.header= "Welcome to the WeChat app"
+%h4.ui.center.aligned.medium.icon.header
+  %i.circular.power.icon.app_color
+  Login or register to continue
+
+.ui.placeholder.segment
+  .ui.two.column.very.relaxed.stackable.grid
+    .column
+      .ui.form
+        .field
+          %label Username
+          .ui.left.icon.input
+            %input{placeholder: "Username", type: "text"}
+            %i.user.icon.app_color
+        .field
+          %label Password
+          .ui.left.icon.input
+            %input{type: "password"}
+            %i.lock.icon.app_color
+        .ui.inv_app_color.submit.button Login
+    .middle.aligned.column
+      .ui.big.button.inv_app_color.btn_disabled
+        %i.signup.icon
+        Sign Up
+  .ui.vertical.divider
+    Or
