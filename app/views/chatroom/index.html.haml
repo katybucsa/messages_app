@@ -4,10 +4,9 @@
 
 .ui.two.column.grid
   .twelve.wide.column
-    %div.ui.fluid.raised.card.chatbox
-      %div.content
-        .ui.small.feed
-          %h4.ui.header Followers Activity
+    .ui.fluid.raised.card.chatbox
+      .content
+        .ui.feed
           .event
             .content
               .summary
@@ -32,12 +31,19 @@
           .event
             .content
               .summary
-                %a Christian Rocha
-                signed up for the  site.
+                %em Christian Rocha:
+                Test message
+
+      .extra.content
+        %form.ui.reply.form
+          .field
+            .ui.fluid.icon.input
+              %input{placeholder: 'Enter a message', type: 'text'}
+              %i.bordered.inv_custom_purple.edit.icon
 
   .four.wide.column
-    %div.ui.fluid.raised.card.chatbox
-      %div.content
+    .ui.fluid.raised.card.chatbox
+      .content
         .ui.inverted.vertical.menu
           %a.active.item
             Home
