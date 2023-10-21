@@ -14,5 +14,5 @@
     .ui.small.inverted.menu
       .ui.container
         = render partial: 'layouts/navigation_bar'
-    .ui.container{data: {controller: params[:controller]}}
+    .ui.container{data: {controller: "chatroom #{params[:controller]}"}}
       = yield
