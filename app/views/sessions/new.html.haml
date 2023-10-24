@@ -6,18 +6,18 @@
 .ui.placeholder.segment
   .ui.two.column.very.relaxed.stackable.grid
     .column
-      .ui.form
+      = form_for :session, html: {class: 'ui form', role: 'form'}, url: login_path do |f|
         .field
-          %label Username
+          = f.label :username, 'Username'
           .ui.left.icon.input
-            %input{placeholder: 'Username', type: 'text'}
+            = f.text_field :username, placeholder: 'Username'
             %i.user.icon.app_color
         .field
-          %label Password
+          = f.label :password, 'Password'
           .ui.left.icon.input
-            %input{placeholder: 'Password', type: 'password'}
+            = f.password_field :password, placeholder: 'Password'
             %i.lock.icon.app_color
-        .ui.inv_app_color.submit.button Login
+        = f.button 'Login', class: 'ui inv_app_color submit button'
     .middle.aligned.column
       .ui.big.button.inv_app_color.btn_disabled
         %i.signup.icon
