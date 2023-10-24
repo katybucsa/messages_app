@@ -7,32 +7,7 @@
     .ui.fluid.raised.card.chatbox
       .content
         .ui.feed
-          .event
-            .content
-              .summary
-                %a Elliot Fu
-                added
-                %a Jenny Hess
-                as a friend
-          .event
-            .content
-              .summary
-                %a Stevie Feliciano
-                added
-                %a Elliot Fu
-                as a friend
-          .event
-            .content
-              .summary
-                %a Helen Troy
-                added
-                %a Christian Rocha
-                as a friend
-          .event
-            .content
-              .summary
-                %em Christian Rocha:
-                Test message
+          = render partial: 'message', collection: @messages
 
       .extra.content
         %form.ui.reply.form
