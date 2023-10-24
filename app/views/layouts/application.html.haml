@@ -15,4 +15,5 @@
       .ui.container
         = render partial: 'layouts/navigation_bar'
     .ui.container{data: {controller: "chatroom #{params[:controller]}"}}
+      = render partial: 'layouts/messages'
       = yield
