@@ -10,11 +10,11 @@
           = render partial: 'message', collection: @messages
 
       .extra.content
-        %form.ui.reply.form
+        = form_for @message, html: { class: 'ui reply form' }, url: messages_path do |f|
           .field
             .ui.fluid.icon.input
-              %input{placeholder: 'Enter a message', type: 'text'}
-              %i.bordered.inv_app_color.edit.icon
+              = f.text_field :body, placeholder: 'Enter a message'
+              %i.bordered.inv_app_color.edit.icon.link.send_message
 
   .four.wide.column
     .ui.fluid.raised.card.chatbox
