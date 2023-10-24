@@ -7,8 +7,7 @@
     Account
     %i.dropdown.icon
     .menu
-      %a.item Logout
-      = link_to 'Login', login_path, class: 'item'
-      %a.item Signup
+      = link_to 'Logout', logout_path, data: { turbo_method: :delete }, class: 'item' if logged_in?
+      = link_to 'Login', login_path, class: 'item' unless logged_in?
   .item
-    .ui.primary.button Sign Up
+    = link_to 'Login', login_path, class: 'ui primary button' unless logged_in?
