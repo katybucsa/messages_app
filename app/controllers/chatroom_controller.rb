@@ -3,6 +3,6 @@ class ChatroomController < ApplicationController
 
   def index
     @message = Message.new
-    @messages = Message.includes(:user).all.order(:created_at)
+    @messages = Message.includes(:user).custom_display
   end
 end
