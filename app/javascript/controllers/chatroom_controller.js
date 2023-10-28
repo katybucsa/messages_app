@@ -12,6 +12,12 @@ export default class extends Controller {
       $(this).closest('form').submit()
     });
 
+    $('input#message_body').on('keyup', function (e) {
+      if (e.keyCode === 13) {
+        $('input#message_body').val('')
+      }
+    });
+
     this.scrollBottom();
   }
 
