@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
 
   def create
     message = current_user.messages.build(message_params)
-    redirect_to root_path if message.save
+    ActionCable.server.broadcast 'chatroom_channel', { new_message: message.body } if message.save
   end
 
   private
